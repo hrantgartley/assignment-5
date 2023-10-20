@@ -8,4 +8,6 @@
                     <button type="button" onclick="refreshPage()">Refresh</button>
                 </form>
             </div>
+        </div>
+    </div>
 </main>
