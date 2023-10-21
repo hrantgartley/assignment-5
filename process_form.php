@@ -22,13 +22,13 @@ if (isset($_POST['bet'])) {
 ?>
 
 <main>
-    <div id="slot-machine">
+    <div class="slot-machine">
         <div class="reel" id="reel1"><?php echo $spinResult[0]; ?></div>
         <div class="reel" id="reel2"><?php echo $spinResult[1]; ?></div>
         <div class="reel" id="reel3"><?php echo $spinResult[2]; ?></div>
     </div>
-    <p><?php echo $resultDisplay; ?></p>
-    <a href="./index.php">Play again</a>
+    <p class="slot-machine"><?php echo $resultDisplay; ?></p>
+    <a href="./index.php"><button type="button">Play again</button></a>
 
-    <button type="button" onclick="refreshPage()">Refresh</button>
+
 </main>
