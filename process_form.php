@@ -29,6 +29,6 @@ if (isset($_POST['bet'])) {
     </div>
     <p class="slot-machine"><?php echo $resultDisplay; ?></p>
     <a href="./index.php"><button type="button">Play again</button></a>
-
+    <button type="button" onclick="refreshPage()">Refresh</button>
 
 </main>
