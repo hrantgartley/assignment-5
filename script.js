@@ -5,7 +5,7 @@ const refreshPage = () => {
 function validate() {
     const input = document.getElementById("meep").value
     if (input === null || input === "") {
-        alert("PUT SOMETHING IN THE DAMN BOX")
+        alert("Box cannot be empty good sir/madam")
         window.location.href = "./index.php"
         return false
     }

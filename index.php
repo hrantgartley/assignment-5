@@ -21,8 +21,6 @@
     }
     require('./foot.php');
     ?>
-
-
 </body>
 
 </html>
