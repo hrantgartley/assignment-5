@@ -20,13 +20,14 @@ if (isset($_POST['bet'])) {
 		$resultDisplay = "Sorry, you lost your bet of $" . number_format($bet, 2);
 	}
 }
-if (count($uniqueWords) === 1 || count($uniqueWords) === 2) {
-	$_SESSION['balance'] += $bet;
-	echo "Total amount won" . number_format($_SESSION['balance'], 2);
+if (count($uniqueWords) === 1) {
+	$_SESSION['balance'] += $bet * 3;
+} elseif (count($uniqueWords) === 2) {
+	$_SESSION['balance'] += $bet * 2;
 } else {
 	$_SESSION['balance'] -= $bet;
-	echo "Total amount won" . number_format($_SESSION['balance'], 2);
 }
+$totalWinnings =  number_format($_SESSION['balance'], 2);
 ?>
 
 <main>
@@ -36,6 +37,7 @@ if (count($uniqueWords) === 1 || count($uniqueWords) === 2) {
 		<div class="reel" id="reel3"><?php echo $spinResult[2]; ?></div>
 	</div>
 	<p class="slot-machine"><?php echo $resultDisplay; ?></p>
+	<p id="total-winnings">Total Winnings so far:&nbsp;<?php echo $totalWinnings; ?></p>
 	<a href="./index.php"><button type="button">Play again</button></a>
 	<button type="button" onclick="refreshPage()">Refresh</button>
 
