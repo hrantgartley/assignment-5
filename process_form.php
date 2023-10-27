@@ -38,7 +38,6 @@ $totalWinnings =  number_format($_SESSION['balance'], 2);
 		<div class="reel" id="reel2">
 			<?php echo $spinResult[1]; ?>
 		</div>
-		<1></1>
 		<div class="reel" id="reel3">
 			<?php echo $spinResult[2]; ?>
 		</div>
