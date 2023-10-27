@@ -32,12 +32,23 @@ $totalWinnings =  number_format($_SESSION['balance'], 2);
 
 <main>
 	<div class="slot-machine">
-		<div class="reel" id="reel1"><?php echo $spinResult[0]; ?></div>
-		<div class="reel" id="reel2"><?php echo $spinResult[1]; ?></div>
-		<div class="reel" id="reel3"><?php echo $spinResult[2]; ?></div>
+		<div class="reel" id="reel1">
+			<?php echo $spinResult[0]; ?>
+		</div>
+		<div class="reel" id="reel2">
+			<?php echo $spinResult[1]; ?>
+		</div>
+		<1></1>
+		<div class="reel" id="reel3">
+			<?php echo $spinResult[2]; ?>
+		</div>
 	</div>
-	<p class="slot-machine"><?php echo $resultDisplay; ?></p>
-	<p id="total-winnings">Total Winnings so far:&nbsp;<?php echo $totalWinnings; ?></p>
+	<p class="slot-machine">
+		<?php echo $resultDisplay; ?>
+	</p>
+	<p id="total-winnings">Total Winnings so far:&nbsp;
+		<?php echo $totalWinnings; ?>
+	</p>
 	<a href="./index.php"><button type="button">Play again</button></a>
 	<button type="button" onclick="refreshPage()">Refresh</button>
 
