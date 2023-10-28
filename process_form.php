@@ -28,6 +28,10 @@ if (count($uniqueWords) === 1) {
 	$_SESSION['balance'] -= $bet;
 }
 $totalWinnings =  number_format($_SESSION['balance'], 2);
+
+function reset_session() {
+	session_unset();
+}
 ?>
 
 <main>
@@ -50,5 +54,6 @@ $totalWinnings =  number_format($_SESSION['balance'], 2);
 	</p>
 	<a href="./index.php"><button type="button">Play again</button></a>
 	<button type="button" onclick="refreshPage()">Refresh</button>
+	<button type="button" onclick="<?php reset_session() ?> alert('Winnings reset')">Reset Winnings</button>
 
 </main>
